@@ -1,0 +1,421 @@
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+  font: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, Hiragino Sans GB, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: 16rem;
+  background-color: #eee;
+}
+
+#app {
+  min-height: 100vh;
+  max-width: 375rem;
+  margin: 0 auto;
+}
+
+.c-header {
+  background: linear-gradient(135deg, #ffd000, #ffbd00);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 50rem;
+  padding: 0 15rem;
+  font-size: 14rem;
+}
+
+.header-city {
+  display: flex;
+  align-items: center;
+  margin-right: 15rem;
+  flex-shrink: 0;
+}
+.header-city img {
+  width: 8rem;
+  margin-left: 5rem;
+}
+
+.header-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 32rem;
+  padding: 0 13rem;
+  background-color: #fff;
+  border-radius: 8rem;
+  color: #999;
+}
+.header-search img {
+  width: 14rem;
+  margin-right: 6rem;
+}
+
+.header-me {
+  margin-left: 15rem;
+}
+.header-me img {
+  width: 24rem;
+  vertical-align: top;
+}
+
+.app-guide {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  padding: 8rem 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app-guide .guide-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.app-guide .guide-content img {
+  width: 36rem;
+}
+.app-guide .guide-content .guide-txt {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 10rem;
+}
+.app-guide .guide-content .guide-txt .content-title {
+  font-size: 13rem;
+  font-weight: bold;
+}
+.app-guide .guide-content .guide-txt .content-desc {
+  font-size: 11rem;
+  padding-top: 3rem;
+}
+.app-guide .guide-btn {
+  display: block;
+  height: 30rem;
+  line-height: 30rem;
+  padding: 0 7.875rem;
+  background-image: linear-gradient(135deg, #ffd000, #ffbd00);
+  border-radius: 7rem;
+  font-size: 13rem;
+  color: #333;
+}
+
+.home-body {
+  align-items: flex-start;
+  width: 100%;
+  background-color: #f6f7fa;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-category-list:first-of-type {
+  margin-top: 0;
+}
+
+.home-category-list {
+  padding: 10.125rem 12rem;
+}
+
+.home-category-list-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 73rem);
+  grid-gap: 20rem;
+  align-items: center;
+}
+
+.home-category a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  font-size: 12rem;
+}
+.home-category a img {
+  width: 52rem;
+}
+.home-category a span {
+  margin-top: 8rem;
+}
+
+.home-restaurant {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.home-restaurant h5 {
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 16rem;
+  color: #333;
+}
+
+#restaurants {
+  flex-grow: 1;
+  margin-top: 10rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#restaurants .restaurant-card:first-of-type {
+  border-top: 1rem solid #ddd8ce;
+}
+#restaurants .restaurant-card {
+  display: flex;
+  align-items: center;
+  padding: 8rem 0;
+  border-bottom: 1rem solid #ddd8ce;
+}
+#restaurants .restaurant-card a {
+  flex: 1;
+}
+#restaurants .restaurant-card a .item-wrapper {
+  background-color: #fff;
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-size: 14rem;
+}
+#restaurants .restaurant-card a .item-wrapper .item-info {
+  display: flex;
+  flex: 1;
+}
+#restaurants .restaurant-card a .item-wrapper .item-info .item-img-wrapper {
+  position: relative;
+  margin-top: 1rem;
+  width: 80rem;
+  height: 80rem;
+  background: url("//s3plus.meituan.net/v1/mss_20cf2cb609bf414daf70e3738dd9eeab/meituan-web-meishife-mobile-img/meituan.png") center center no-repeat #e0e0e0;
+  background-size: cover;
+}
+#restaurants .restaurant-card a .item-wrapper .item-info .item-img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+#restaurants .restaurant-card a .item-wrapper .item-info .item-info-wrapper {
+  flex: 1;
+  padding: 0 0 10rem 0;
+  margin-left: 10rem;
+  border-bottom: 1px solid #e5e5e5;
+  max-width: 264rem;
+  min-height: 100rem;
+  display: flex;
+  line-height: 1.8;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: stretch;
+}
+#restaurants .restaurant-card a .item-wrapper .item-info .item-info-wrapper .info-name {
+  font-size: 16rem;
+  color: #333;
+}
+#restaurants .restaurant-card a .item-wrapper .item-info .item-info-wrapper .info-stars {
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+}
+#restaurants .restaurant-card a .item-wrapper .item-info .item-info-wrapper .info-stars span:first-child {
+  color: #ff4b10;
+}
+#restaurants .restaurant-card a .item-wrapper .item-info .item-info-wrapper .info-featured {
+  color: #ff4b10;
+}
+#restaurants .restaurant-card a .item-wrapper .item-info .item-info-wrapper .info-promotion {
+  color: #333;
+}
+#restaurants .restaurant-card a .item-wrapper .item-info .item-info-wrapper .info-averagecost {
+  color: #333;
+}
+#restaurants .restaurant-card a .item-wrapper .maidian {
+  color: #333;
+  display: flex;
+  padding: 10rem 0 0 0;
+  font-size: 12rem;
+}
+#restaurants .restaurant-card a .item-wrapper .maidian .cut {
+  width: 80rem;
+  text-align: right;
+}
+#restaurants .restaurant-card a .item-wrapper .maidian .info-promotion {
+  padding-left: 20rem;
+}
+
+.c-footer {
+  width: 100%;
+  padding: 20rem;
+  margin-top: 30rem;
+  font-size: 14rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.loader {
+  width: 50px;
+  height: 10px;
+  position: fixed;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  opacity: 0;
+  position: absolute;
+}
+
+.show {
+  opacity: 1;
+}
+
+.ball {
+  background-color: #000;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: jump 0.5s ease-out infinite;
+}
+
+.ball:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.ball:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.footer-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20rem;
+}
+
+.footer-user .mt-btn {
+  color: #222;
+  padding: 2rem 8rem;
+  font-size: 14rem;
+  background-image: linear-gradient(135deg, #ffd000, #ffbd00);
+  border: none;
+  border-radius: 5rem;
+}
+
+.footer-city {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-city span {
+  color: #999;
+}
+.footer-city img {
+  width: 12rem;
+  margin-right: 3rem;
+}
+.footer-city .city-text {
+  color: #222;
+}
+
+.main-link-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fe8c00;
+}
+.main-link-wrap li::after {
+  content: "|";
+  color: #999;
+  padding-left: 16rem;
+}
+.main-link-wrap li:last-child::after {
+  content: "";
+}
+
+.friend-link-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20rem;
+  color: #646464;
+  line-height: 2;
+}
+
+.footer-certificate {
+  position: relative;
+  margin-top: 20rem;
+  color: #999;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a, a:visited, a:active {
+  text-align: none;
+}
+
+/*# sourceMappingURL=style.css.map */

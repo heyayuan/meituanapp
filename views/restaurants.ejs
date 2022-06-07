@@ -1,0 +1,97 @@
+
+    <h2>全部餐馆</h2>
+    <div id="restaurants"></div>
+    <div class="loader show">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+<script>
+    let skipNum = 0
+    function getData(){
+        const http = new XMLHttpRequest()
+        http.open('POST','/category/<%= categoryId %>',true)
+        http.onreadystatechange = function(){
+            console.log(this.status)
+            if(this.readyState === 4 && this.status === 200){
+                const data = JSON.parse(this.responseText)
+                let html = ''
+                for(let i=0;i<data.length;i++){
+                    html += `
+                    <div class="restaurant">
+                        <a href='/restaurants/${data[i]._id}'>
+                        <div><img src="${data[i].image}" alt=""></div>
+                        <h4>${data[i].name}</h4>
+                        </div>
+                    `
+                }
+                document.querySelector('#restaurants').innerHTML += html
+                skipNum += 2
+                document.querySelector('.loader').classList.remove('show')
+            }
+        }
+        const formData = new FormData()
+        formData.append('skipNum',skipNum)
+        http.send(formData)
+    }
+//页面加载完成时加载getdata（）：初始化
+window.addEventListener('load',function(){
+    getData()
+})
+
+//上滑到底时加载getdata（）
+window.addEventListener('scroll',function(){
+    const{clientHeight,scrollTop,scrollHeight} = document.documentElement
+    //console.log({clientHeight,scrollTop,scrollHeight})
+    //视口高：clientHeight 滚动条滚动距离：scrollTop 内容高：scrollHeight
+    if(clientHeight + scrollTop >= scrollHeight){
+        console.log('到底了')
+        showloader()
+    }
+})
+function showloader(){
+    document.querySelector('.loader').classList.add('show')
+    setTimeout(function(){
+        getData()
+    },1000)
+}
+</script>
+<style>
+.loader{
+    width: 50px;
+    height: 10px;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+}
+.ball{
+    background-color: black;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: jump .5s ease-out infinite;
+
+}
+.ball:nth-child(2){
+    animation-delay: 0.1s;
+}
+.ball:nth-child(3){
+    animation-delay: 0.2s;
+}
+@keyframes jump{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+</style>

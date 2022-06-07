@@ -1,0 +1,54 @@
+<% categories.forEach(function(item,index){ %>
+    <div>
+        <img src="<%= item.image %>" alt="">
+    </div>
+    <h4>
+        <%= item.name %>
+    </h4>
+    <% }) %>
+        <div class="restaurant">
+            <div>
+                <h2>全部餐馆</h2>
+                <% restaurants.forEach(function(item,index){ %>
+                    <div>
+                        <img src="<%= item.image %>" alt="">
+                    </div>
+                    <h4>
+                        <%= item.name %>
+                    </h4>
+                    <% }) %>
+            </div>
+            <div>
+                <h2>最受欢迎的5家</h2>
+                <% stars.forEach(function(item,index){ %>
+                    <div>
+                        <img src="<%= item.image %>" alt="">
+                    </div>
+                    <h4>
+                        <%= item.name %>
+                    </h4>
+                    <% }) %>
+            </div>
+            <div>
+                <h2>最近的5家火锅店</h2>
+                <% distance.forEach(function(item,index){ %>
+                    <div>
+                        <img src="<%= item.image %>" alt="">
+                    </div>
+                    <h4>
+                        <%= item.name %>
+                    </h4>
+                    <% }) %>
+            </div>
+            <div>
+                <h2>最新加盟的烧烤店</h2>
+                <img src="" alt="">
+                <h2>餐馆名字</h2>
+            </div>
+            <div>
+                <h2>最新加盟的西餐厅</h2>
+                <img src="" alt="">
+                <h2>餐馆名字</h2>
+            </div>
+
+        </div>

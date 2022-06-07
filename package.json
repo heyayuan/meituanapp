@@ -1,0 +1,25 @@
+{
+  "name": "demo526",
+  "version": "1.0.0",
+  "description": "前端\r - HTML：结构 \r     - EJS：嵌入式HTML模板，向HTM代码中嵌入JS\r       - Embed JavaScript\r - CSS：样式\r     - BootStrap\r - JS：行为",
+  "main": "index.js",
+  "scripts": {
+    "sass-watch": "sass --watch scss/style.scss public/css/style.css",
+    "nodemon-watch": "nodemon app.js",
+    "dev": "npm-run-all --parallel sass-watch nodemon-watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-fileupload": "^1.4.0",
+    "mongoose": "^6.3.4",
+    "sass": "^1.52.2"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

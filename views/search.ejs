@@ -1,0 +1,14 @@
+<h1>搜索结果</h1>
+
+<div class="result">
+    <% if(searchResult != ''){ %>
+    <div class="restaurant">
+        <a href="/restaurants/<%= searchResult[0]._id %>">
+            <div><img src="<%= searchResult[0].image %>" alt=""></div>
+            <h4><%= searchResult[0].name %></h4>
+        </a>
+    </div>
+    <% }else{ %>
+    <p>搜不到</p>
+    <% } %>
+</div>

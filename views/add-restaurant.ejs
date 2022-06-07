@@ -1,0 +1,50 @@
+<h2>添加餐馆</h2>
+<p>增加订单，立刻添加</p>
+
+<div class="add-restaurant">
+    <form action="./add-restaurant" enctype="multipart/form-data" method="post">
+        <div>
+            <label for="name">餐馆名称</label>
+        <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="name">分类</label>
+            <select name="category" id="category">
+                <option value="selected">选择分类</option>
+                <option value="huoguo">火锅</option>
+                <option value="haixian">海鲜</option>
+                <option value="kaorou">烤肉</option>
+                <option value="zizhu">自助</option>
+                <option value="kuaican">快餐</option>
+                <option value="xican">西餐</option>
+                <option value="tiandian">甜点</option>
+                <option value="yinpin">饮品</option>
+            </select>
+        </div>
+        <div>
+            <label for="photo">餐馆图片</label>
+            <input type="file" name="photo" id="photo">
+        </div>
+        <div>
+            <label for="intro">餐馆简介</label>
+            <textarea name="intro" id="intro" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="averageCost">人均消费</label>
+            <input type="number" name="averageCost" id="averageCost">
+        </div>
+        <div>
+            <label for="promotion">促销信息</label>
+            <input type="text" name="promotion" id="promotion">
+        </div>
+        <div>
+            <label for="featured">餐馆特色</label>
+            <input type="text" name="featured" id="featured">
+        </div>
+        <div>
+            <label for="address">参观地址</label>
+            <input type="text" name="address" id="address">
+        </div>
+        <input type="submit" value="提交">
+    </form>
+</div>
